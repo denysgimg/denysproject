@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти | Геннадій та Жасмин</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contacts-wrapper {
+            padding: 150px 20px 100px;
+            min-height: 70vh;
+            text-align: center;
+        }
+        .contact-info {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #555;
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        /* Темний хедер для інших сторінок */
+        .header-solid {
+            background-color: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <header class="header header-solid">
+        <div class="logo"><a href="index.html">Весілля</a></div>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="index.html">ГОЛОВНА</a></li>
+                <li><a href="contacts.html">КОНТАКТИ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contacts-wrapper">
+        <div class="container">
+            <div class="section-header">
+                <p class="subtitle">ЗВ'ЯЗОК З НАМИ</p>
+                <h2 class="script-title">Контакти</h2>
+                <p class="desc-text">Пишіть нам куди завгодно, але краще напряму в Discord.</p>
+            </div>
+            
+            <div class="contact-info">
+                <p><strong>Discord Геннадія:</strong> kentyara#1234</p>
+                <p><strong>Локація:</strong> Київ (і десь там за 3000 км)</p>
+            </div>
+
+            <form class="contact-form">
+                <input type="text" placeholder="Ваше ім'я (або нікнейм)" required>
+                <input type="email" placeholder="Ваш Email" required>
+                <textarea placeholder="Напишіть своє побажання або питання..." rows="5" required></textarea>
+                <button type="submit" class="btn btn-pink">Відправити повідомлення</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Курсовий проєкт. Усі права захищено.</p>
+        </div>
+    </footer>
+</body>
+</html>
