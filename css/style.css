@@ -856,3 +856,26 @@ body {
     .services-container { flex-direction: row; align-items: center; }
     .services-left, .services-right { width: 50%; }
 }
+
+/* --- Стилі для сторінки 404 --- */
+.error-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+.error-page h1 {
+    font-size: 8rem;
+    color: #e85b8c;
+    margin-bottom: 0;
+    font-family: 'Arial', sans-serif;
+}
+.error-page p {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
