@@ -11,7 +11,6 @@ body {
     color: #333;
 }
 
-/* Секція 1: Hero */
 .hero-section {
     position: relative;
     height: 100vh; 
@@ -166,7 +165,6 @@ body {
     color: #fff;
 }
 
-/* Секція 2: Hello! */
 .hello-section {
     padding: 100px 20px;
     background-color: #fff;
@@ -258,14 +256,13 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1); 
 }
 
-/* Секція 3: Wedding Events */
 .events-section {
     position: relative;
     padding: 100px 20px;
     background-image: url('../images/events-bg.jpg'); 
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Паралакс */
+    background-attachment: fixed; 
     color: #fff;
     text-align: center;
 }
@@ -274,7 +271,7 @@ body {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* Нейтральне чорне затемнення на 40%, ніякого синього */
+    background: rgba(0, 0, 0, 0.4); 
     z-index: 1;
 }
 
@@ -304,9 +301,9 @@ body {
 
 .event-card {
     background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.15); /* Ледь помітна рамка */
-    padding: 50px 40px; /* Більше простору всередині */
-    border-radius: 0; /* Гострі кути, як у макеті */
+    border: 1px solid rgba(255, 255, 255, 0.15); 
+    padding: 50px 40px; 
+    border-radius: 0; 
     transition: background-color 0.3s, border-color 0.3s;
 }
 
@@ -317,9 +314,9 @@ body {
 
 .card-title {
     position: relative;
-    font-size: 12px; /* Дрібніший шрифт */
-    letter-spacing: 4px; /* Ширші відступи між літерами */
-    font-weight: 400; /* Тонший шрифт */
+    font-size: 12px;  
+    letter-spacing: 4px; 
+    font-weight: 400; 
     margin-bottom: 30px;
     padding-bottom: 20px;
 }
@@ -330,7 +327,7 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 40px; /* Коротша і акуратніша лінія */
+    width: 40px; 
     height: 1px;
     background-color: rgba(255, 255, 255, 0.4);
 }
@@ -342,7 +339,7 @@ body {
 }
 
 .detail-item {
-    font-size: 12px; /* Менший текст дати/часу */
+    font-size: 12px; 
     line-height: 1.8;
     color: #fff;
     letter-spacing: 1px;
@@ -354,7 +351,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* Зменшуємо самі SVG іконки */
 .detail-item .icon svg {
     width: 18px;
     height: 18px;
@@ -362,13 +358,12 @@ body {
 }
 
 .event-desc {
-    font-size: 13px; /* Менший і акуратніший текст опису */
-    line-height: 2; /* Більший інтервал між рядками */
-    color: rgba(255, 255, 255, 0.65); /* Напівпрозорий текст */
+    font-size: 13px; 
+    line-height: 2; 
+    color: rgba(255, 255, 255, 0.65);
     margin-top: 10px;
 }
 
-/* Адаптивність для десктопу (екрани від 768px і 992px) */
 @media (min-width: 768px) {
     .burger { display: none; } 
     
@@ -428,7 +423,6 @@ body {
     .time-circle { width: 70px; height: 70px; }
     .time-circle .number { font-size: 24px; }
 }
-/* --- Секція Наша Історія (Our Story) --- */
 .story-section {
     padding: 100px 20px;
     background-color: #fff;
@@ -456,7 +450,6 @@ body {
     line-height: 1.8;
 }
 
-/* Таймлайн (Лінія часу) */
 .timeline {
     position: relative;
     max-width: 1000px;
@@ -466,13 +459,12 @@ body {
     gap: 40px;
 }
 
-/* Центральна лінія */
 .timeline::before {
     content: '';
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 80px; /* Половина від 160px, щоб лінія була чітко по центру кружка на мобільному */
+    left: 80px;  
     width: 1px;
     background-color: #eee;
 }
@@ -482,16 +474,15 @@ body {
     flex-direction: column;
     align-items: flex-start;
     position: relative;
-    padding-left: 190px; /* Збільшили відступ, щоб текст не ховався за кружком */
+    padding-left: 190px; 
 }
 
-/* Кружечки з фото/фоном */
 .timeline-circle {
     position: absolute;
     left: 0;
     top: 0;
-    width: 160px; /* Твій новий розмір! */
-    height: 160px; /* Твій новий розмір! */
+    width: 160px; 
+    height: 160px; 
     border-radius: 50%;
     background-color: #ccc; 
     border: 5px solid #fff;
@@ -509,7 +500,6 @@ body {
     width: 100%;
 }
 
-/* Стрілочка до блоку */
 .timeline-content::before {
     content: '';
     position: absolute;
@@ -550,10 +540,9 @@ body {
     color: #999;
 }
 
-/* Адаптивність для десктопу (від 992px) */
 @media (min-width: 992px) {
     .timeline::before {
-        left: 50%; /* Лінія по центру */
+        left: 50%;  
     }
 
     .timeline-item {
@@ -565,29 +554,28 @@ body {
     }
 
     .timeline-item.left {
-        padding-right: 110px; /* Збільшили відступ від великого кружечка */
+        padding-right: 110px; 
         align-self: flex-start;
     }
 
     .timeline-item.right {
-        padding-left: 110px; /* Збільшили відступ від великого кружечка */
+        padding-left: 110px; 
         align-self: flex-end;
         flex-direction: row-reverse; 
     }
 
     .timeline-circle {
         left: auto;
-        right: -80px; /* Половина від 160px, щоб кружок встав рівно на лінію */
+        right: -80px;
         top: 50%;
         transform: translateY(-50%);
     }
 
     .timeline-item.right .timeline-circle {
         right: auto;
-        left: -80px; /* Половина від 160px */
+        left: -80px; 
     }
 
-    /* Налаштування стрілочок для правих і лівих блоків */
     .timeline-item.left .timeline-content::before {
         left: auto;
         right: -10px;
@@ -612,25 +600,23 @@ body {
         border-color: transparent #fff transparent transparent;
     }
 }
-/* --- Секція Галерея (Wedding Gallery) --- */
 .gallery-section {
     padding: 100px 20px;
-    background-color: #f8f9fa; /* Злегка сіруватий фон, щоб відділити від білої секції "Our Story" */
+    background-color: #f8f9fa; 
 }
 
-/* Використовуємо CSS Grid для галереї (Mobile First: 1 колонка) */
 .gallery-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px; /* Мінімальні відступи між фото на телефоні */
+    gap: 10px; 
     max-width: 1140px;
     margin: 0 auto;
 }
 
 .gallery-item {
     position: relative;
-    overflow: hidden; /* Щоб фото при зумі не вилазило за краї */
-    aspect-ratio: 1 / 1; /* Робить блоки ідеально квадратними */
+    overflow: hidden; 
+    aspect-ratio: 1 / 1; 
     border-radius: 3px;
     cursor: pointer;
 }
@@ -639,32 +625,31 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease; /* Плавний зум */
+    transition: transform 0.5s ease; 
 }
 
-/* Накладення градієнту та тексту */
 .gallery-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     padding: 40px 20px 20px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); /* Затемнення знизу */
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); 
     color: #fff;
-    opacity: 0; /* Приховано за замовчуванням */
+    opacity: 0; 
     transition: opacity 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-/* Ефекти при наведенні мишки */
+
 .gallery-item:hover img {
-    transform: scale(1.1); /* Збільшуємо фото на 10% */
+    transform: scale(1.1); 
 }
 
 .gallery-item:hover .gallery-overlay {
-    opacity: 1; /* Показуємо текст */
+    opacity: 1; 
 }
 
 .photo-count {
@@ -680,28 +665,26 @@ body {
     font-weight: 400;
 }
 
-/* Адаптивність */
 @media (min-width: 768px) {
     .gallery-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшеті */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 15px;
     }
 }
 
 @media (min-width: 992px) {
     .gallery-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 колонки на ПК */
-        gap: 20px; /* Ширші відступи на ПК, як у макеті */
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px;
     }
 }
-/* --- Секція Статистики --- */
 .stats-section {
     position: relative;
     padding: 100px 20px;
-    background-image: url('../images/stats-bg.jpg'); /* Картинка моря */
+    background-image: url('../images/stats-bg.jpg'); 
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Паралакс-ефект */
+    background-attachment: fixed; 
     color: #fff;
 }
 
@@ -724,7 +707,7 @@ body {
 
 .stat-item {
     text-align: center;
-    width: 40%; /* 2 колонки на телефоні */
+    width: 40%; 
 }
 
 .stat-icon {
@@ -750,7 +733,6 @@ body {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* --- Секція Відгуків (Friends Wishes) --- */
 .wishes-section {
     padding: 100px 20px;
     background-color: #fff;
@@ -758,7 +740,7 @@ body {
 }
 
 .wishes-swiper {
-    padding-bottom: 50px; /* Місце для крапочок пагінації */
+    padding-bottom: 50px; 
 }
 
 .wish-card {
@@ -796,7 +778,6 @@ body {
     line-height: 1.8;
 }
 
-/* Налаштування крапочок пагінації Swiper */
 .swiper-pagination-bullet {
     background-color: #ccc;
     opacity: 1;
@@ -806,16 +787,14 @@ body {
     border: 2px solid #e85b8c;
 }
 
-/* Адаптивність для ПК */
 @media (min-width: 768px) {
     .stat-item {
-        width: 20%; /* 4 колонки на великих екранах */
+        width: 20%; 
     }
     .stat-number {
         font-size: 48px;
     }
 }
-/* --- Секція Послуг --- */
 .services-section { padding: 100px 20px; background-color: #f8f9fa; }
 .services-container { display: flex; flex-direction: column; gap: 50px; max-width: 1140px; margin: 0 auto; }
 .align-left { text-align: left; margin-bottom: 40px; }
@@ -829,7 +808,6 @@ body {
 .video-thumbnail:hover img { transform: scale(1.05); }
 .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70px; height: 70px; background: #fff; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: #e85b8c; font-size: 24px; box-shadow: 0 0 20px rgba(0,0,0,0.2); }
 
-/* --- Секція Are You Attending --- */
 .attend-section { padding: 120px 20px; text-align: center; position: relative; background-image: url('../images/attend-bg.jpg'); background-size: cover; background-position: center; background-attachment: fixed; color: #fff; }
 .attend-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); z-index: 1; }
 .attend-section .container { position: relative; z-index: 2; }
@@ -838,10 +816,8 @@ body {
 .btn-pink:hover { background: #d04677; }
 .mt-3 { margin-top: 20px; }
 
-/* --- Футер --- */
 .footer { padding: 50px 20px; text-align: center; background: #fff; color: #999; font-size: 12px; letter-spacing: 1px; }
 
-/* --- Модальні вікна --- */
 .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 1000; display: flex; justify-content: center; align-items: center; opacity: 0; visibility: hidden; transition: 0.3s; }
 .modal-overlay.active { opacity: 1; visibility: visible; }
 .modal-content { background: #fff; padding: 40px; border-radius: 5px; width: 90%; max-width: 500px; position: relative; text-align: center; transform: translateY(-20px); transition: 0.3s; }
@@ -857,7 +833,6 @@ body {
     .services-left, .services-right { width: 50%; }
 }
 
-/* --- Стилі для сторінки 404 --- */
 .error-page {
     height: 100vh;
     display: flex;
@@ -880,7 +855,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* --- Стилі для сторінки контактів --- */
 .contacts-wrapper {
     padding: 150px 20px 100px;
     min-height: 70vh;
@@ -905,7 +879,6 @@ body {
     border-radius: 5px;
     font-family: inherit;
 }
-/* Темний хедер для інших сторінок */
 .header-solid {
     background-color: rgba(0, 0, 0, 0.9);
     position: fixed;

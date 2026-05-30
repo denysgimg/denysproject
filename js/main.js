@@ -1,4 +1,3 @@
-// --- Бургер-меню ---
 const burgerIcon = document.getElementById('burgerIcon');
 const menuList = document.getElementById('menuList');
 
@@ -8,7 +7,6 @@ if (burgerIcon && menuList) {
     });
 }
 
-// --- Таймер зворотного відліку ---
 const countdownContainer = document.getElementById("countdown");
 if (countdownContainer) {
     const weddingDate = new Date(2026, 7, 31, 12, 0, 0).getTime();
@@ -42,7 +40,6 @@ if (countdownContainer) {
     updateCountdown();
 }
 
-// --- Ініціалізація Swiper для відгуків ---
 if (document.querySelector('.wishes-swiper')) {
     const swiper = new Swiper('.wishes-swiper', {
         loop: true,
@@ -56,7 +53,6 @@ if (document.querySelector('.wishes-swiper')) {
     });
 }
 
-// --- Анімація чисел (Лічильники) ---
 const counters = document.querySelectorAll('.stat-number');
 if (counters.length > 0) {
     const speed = 200;
@@ -89,7 +85,6 @@ if (counters.length > 0) {
     window.addEventListener('scroll', animateCounters);
 }
 
-// --- Логіка Модальних Вікон ---
 const formModal = document.getElementById('formModal');
 const videoModal = document.getElementById('videoModal');
 
@@ -99,7 +94,6 @@ const closeFormBtn = document.getElementById('closeFormBtn');
 const openVideoBtn = document.getElementById('openVideoModalBtn');
 const closeVideoBtn = document.getElementById('closeVideoBtn');
 
-// Логіка форми
 if (formModal) {
     openFormBtns.forEach(btn => {
         if (btn) btn.addEventListener('click', () => formModal.classList.add('active'));
@@ -109,7 +103,6 @@ if (formModal) {
     }
 }
 
-// Логіка відео
 if (videoModal) {
     if (openVideoBtn) openVideoBtn.addEventListener('click', () => videoModal.classList.add('active'));
     if (closeVideoBtn) {
@@ -120,7 +113,6 @@ if (videoModal) {
     }
 }
 
-// Клік повз модалку (miss click)
 window.addEventListener('click', (e) => {
     if (formModal && e.target === formModal) formModal.classList.remove('active');
     if (videoModal && e.target === videoModal) {
@@ -129,7 +121,6 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// Функція зупинки відео
 function stopVideo() {
     if (videoModal) {
         const iframe = videoModal.querySelector('iframe');
@@ -138,4 +129,47 @@ function stopVideo() {
             iframe.src = iframeSrc; 
         }
     }
+}
+
+
+const eventsContainer = document.getElementById('eventsContainer');
+if (eventsContainer) {
+    const weddingEvents = [
+        {
+            title: "ГОЛОВНА ЦЕРЕМОНІЯ",
+            time: "16:00<br>18:00",
+            date: "Субота, 28<br>Листопада, 2026",
+            desc: "Офіційна частина, обмін обітницями та обручками у затишній атмосфері заміського комплексу."
+        },
+        {
+            title: "ВЕСІЛЬНА ВЕЧІРКА",
+            time: "19:00<br>00:00",
+            date: "Субота, 28<br>Листопада, 2026",
+            desc: "Святковий банкет, жива музика, танці до упаду та неймовірний весільний торт."
+        }
+    ];
+
+    weddingEvents.forEach(event => {
+        const card = document.createElement('div');
+        card.className = 'event-card';
+        card.innerHTML = `
+            <h3 class="card-title">${event.title}</h3>
+            <div class="event-details">
+                <div class="detail-item">
+                    <span class="icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </span>
+                    <p>${event.time}</p>
+                </div>
+                <div class="detail-item">
+                    <span class="icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    </span>
+                    <p>${event.date}</p>
+                </div>
+            </div>
+            <p class="event-desc">${event.desc}</p>
+        `;
+        eventsContainer.appendChild(card);
+    });
 }
