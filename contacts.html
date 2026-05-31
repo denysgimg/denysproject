@@ -9,10 +9,22 @@
 </head>
 <body>
     <header class="header header-solid">
-        <div class="logo"><a href="index.html">Весілля</a></div>
-        <nav class="nav">
+        <div class="logo">
+            <a href="index.html">Весілля</a>
+        </div>
+        
+        <div class="burger" id="burgerIcon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav" id="menuList">
             <ul class="menu">
                 <li><a href="index.html">ГОЛОВНА</a></li>
+                <li><a href="story.html">ІСТОРІЯ</a></li>
+                <li><a href="program.html">ПРОГРАМА</a></li>
+                <li><a href="gallery.html">ГАЛЕРЕЯ</a></li>
                 <li><a href="contacts.html">КОНТАКТИ</a></li>
             </ul>
         </nav>
@@ -32,9 +44,9 @@
             </div>
 
             <form class="contact-form">
-                <input type="text" placeholder="Ваше ім'я (або нікнейм)" required>
-                <input type="email" placeholder="Ваш Email" required>
-                <textarea placeholder="Напишіть своє побажання або питання..." rows="5" required></textarea>
+                <input type="text" name="client_name" placeholder="Ваше ім'я (або нікнейм)" required>
+                <input type="email" name="client_email" placeholder="Ваш Email" required>
+                <textarea name="client_message" placeholder="Напишіть свое побажання або питання..." rows="5" required></textarea>
                 <button type="submit" class="btn btn-pink">Відправити повідомлення</button>
             </form>
         </div>
@@ -45,5 +57,7 @@
             <p>© 2026 Весілля Геннадія та Жасмин. Усі права захищено.</p>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

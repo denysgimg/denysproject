@@ -1,9 +1,13 @@
 const burgerIcon = document.getElementById('burgerIcon');
 const menuList = document.getElementById('menuList');
+const headerElement = document.querySelector('.header');
 
 if (burgerIcon && menuList) {
     burgerIcon.addEventListener('click', () => {
         menuList.classList.toggle('active');
+        if (headerElement) {
+            headerElement.classList.toggle('menu-open');
+        }
     });
 }
 
@@ -130,7 +134,6 @@ function stopVideo() {
         }
     }
 }
-
 
 const eventsContainer = document.getElementById('eventsContainer');
 if (eventsContainer) {

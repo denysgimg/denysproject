@@ -1130,3 +1130,8 @@ body {
         font-size: 24px; 
     }
 }
+
+.header.menu-open {
+    background-color: #141414 !important;
+    transition: background-color 0.3s ease;
+}
